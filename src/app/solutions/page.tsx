@@ -2,6 +2,13 @@ import Image from 'next/image';
 import { BuildingStorefrontIcon, ChartBarIcon, CogIcon, CpuChipIcon, CursorArrowRaysIcon, MegaphoneIcon, RocketLaunchIcon, ScaleIcon, ShoppingBagIcon, SparklesIcon, TruckIcon, UserGroupIcon, WrenchScrewdriverIcon } from '@heroicons/react/24/outline';
 import { CheckCircleIcon } from '@heroicons/react/20/solid';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Multi-Platform Distribution Solutions | HDG Distribution',
+  description: 'Comprehensive import and distribution solutions including local retail partnerships, TikTok Shop integration, eBay marketplace optimization, and international supply chain management.',
+  keywords: 'distribution solutions, import services, local retail, TikTok Shop, eBay marketplace, supply chain management, logistics network, international shipping',
+};
 
 export default function Solutions() {
   return (
@@ -11,7 +18,7 @@ export default function Solutions() {
         <div className="absolute inset-0">
           <Image
             src="/images/bg.jpg"
-            alt="HDG Background"
+            alt="HDG Distribution Solutions Background"
             fill
             sizes="100vw"
             className="object-cover opacity-20"
@@ -20,10 +27,10 @@ export default function Solutions() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Multi-Platform Distribution Solutions
+              Global Import & Multi-Platform Distribution Solutions
             </h1>
             <p className="text-xl max-w-3xl mx-auto">
-              Leveraging our extensive warehousing capabilities and 32 years of distribution expertise to maximize your sales across major e-commerce platforms
+              Leveraging our extensive warehousing capabilities, international sourcing expertise, and 32 years of distribution experience to maximize your market reach
             </p>
           </div>
         </div>
@@ -255,6 +262,83 @@ export default function Solutions() {
                 <Link href="/contact">
                   <button className="bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300">
                     Boost Your eBay Sales
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Import & Distribution Solution */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-12">
+            <div className="bg-white p-8 rounded-lg shadow-lg transition-shadow duration-300 hover:shadow-xl">
+              <div className="flex items-center mb-6">
+                <TruckIcon className="h-16 w-16 text-blue-600 mr-4" />
+                <h2 className="text-2xl font-bold">Import & Distribution Solutions</h2>
+              </div>
+              <p className="text-gray-600 mb-6">
+                Streamline your product importation and distribution with our comprehensive logistics network. We handle everything from international shipping to local supplier delivery, ensuring your products reach the right markets efficiently.
+              </p>
+              <div className="grid md:grid-cols-3 gap-6 mb-8">
+                <div className="border rounded-lg p-4">
+                  <h3 className="font-bold text-lg mb-2">Import Management</h3>
+                  <ul className="space-y-2 text-gray-600">
+                    <li className="flex items-start">
+                      <ShoppingBagIcon className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                      International sourcing
+                    </li>
+                    <li className="flex items-start">
+                      <ScaleIcon className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                      Customs clearance
+                    </li>
+                    <li className="flex items-start">
+                      <CogIcon className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                      Quality control
+                    </li>
+                  </ul>
+                </div>
+                <div className="border rounded-lg p-4">
+                  <h3 className="font-bold text-lg mb-2">Distribution Network</h3>
+                  <ul className="space-y-2 text-gray-600">
+                    <li className="flex items-start">
+                      <TruckIcon className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                      Nationwide coverage
+                    </li>
+                    <li className="flex items-start">
+                      <BuildingStorefrontIcon className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                      Local supplier partnerships
+                    </li>
+                    <li className="flex items-start">
+                      <ChartBarIcon className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                      Route optimization
+                    </li>
+                  </ul>
+                </div>
+                <div className="border rounded-lg p-4">
+                  <h3 className="font-bold text-lg mb-2">Supply Chain Management</h3>
+                  <ul className="space-y-2 text-gray-600">
+                    <li className="flex items-start">
+                      <CpuChipIcon className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                      Real-time tracking
+                    </li>
+                    <li className="flex items-start">
+                      <WrenchScrewdriverIcon className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                      Inventory forecasting
+                    </li>
+                    <li className="flex items-start">
+                      <SparklesIcon className="h-5 w-5 text-blue-600 mr-2 mt-0.5 flex-shrink-0" />
+                      Demand planning
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="text-center">
+                <Link href="/contact">
+                  <button className="bg-blue-600 text-white font-semibold py-2 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                    Start Importing & Distributing
                   </button>
                 </Link>
               </div>
