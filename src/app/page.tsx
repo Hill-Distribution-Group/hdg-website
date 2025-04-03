@@ -1,101 +1,142 @@
-import Image from "next/image";
+import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative bg-blue-900 py-20">
+        <div className="absolute inset-0">
+          <Image
+            src="/images/bg.jpg"
+            alt="HDG Background"
+            fill
+            sizes="100vw"
+            className="object-cover opacity-20"
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              Hill Distribution Group
+            </h1>
+            <p className="text-xl max-w-3xl mx-auto text-white">
+              Transforming distribution with innovative technology and decades of expertise.
+            </p>
+            <div className="mt-10">
+              <Link 
+                href="/people" 
+                className="inline-block bg-white text-blue-900 font-medium py-3 px-6 rounded-md shadow hover:bg-gray-100 transition-colors"
+              >
+                Meet Our Team
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Large-Scale Distribution Operations
+            </h2>
+            <p className="text-xl text-gray-600">
+              Extensive warehousing facilities and experienced operations team ready to handle your distribution needs
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="relative h-[300px] rounded-lg overflow-hidden">
+              <Image
+                src="/images/modern_facilities.jpg"
+                alt="HDG Modern Facilities"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <h3 className="text-xl font-bold mb-2">Modern Facilities</h3>
+                <p>State-of-the-art warehousing with advanced inventory management systems</p>
+              </div>
+            </div>
+
+            <div className="relative h-[300px] rounded-lg overflow-hidden">
+              <Image
+                src="/images/expert_team.jpg"
+                alt="HDG Expert Team"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <h3 className="text-xl font-bold mb-2">Expert Team</h3>
+                <p>Highly skilled warehouse staff with decades of combined experience</p>
+              </div>
+            </div>
+
+            <div className="relative h-[300px] rounded-lg overflow-hidden">
+              <Image
+                src="/images/strong_financial.jpg"
+                alt="HDG Strong Financial Foundation"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+              <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                <h3 className="text-xl font-bold mb-2">Strong Financial Foundation</h3>
+                <p>High capital investment and strong financial backing to support rapid growth and expansion</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                Partner With HDG Distribution
+              </h2>
+              <p className="text-xl text-gray-600 mb-6">
+                With our extensive warehouse facilities, experienced team, and strong financial position, we&apos;re the ideal partner for wholesalers and suppliers looking to expand their market reach.
+              </p>
+              <p className="text-xl text-gray-600">
+                Our 32 years of industry expertise and established presence across major e-commerce platforms ensures your products reach their full market potential.
+              </p>
+            </div>
+            <div className="relative h-[400px]">
+              <Image
+                src="/images/logo2.png"
+                alt="HDG Logo"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-blue-700 text-white py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Grow Your Business With Us
+          </h2>
+          <p className="text-xl mb-8 max-w-2xl mx-auto">
+            Join our network of successful wholesalers and suppliers. Let&apos;s expand your market reach together.
+          </p>
+          <Link href="/contact" className="inline-block bg-white text-blue-700 font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition duration-300">
+            Partner With Us Today
+          </Link>
+        </div>
+      </section>
     </div>
-  );
-}
+  )
+} 
