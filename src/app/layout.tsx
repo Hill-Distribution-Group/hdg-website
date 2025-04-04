@@ -8,7 +8,21 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Hill Distribution Group',
-  description: 'Official website for Hill Distribution Group',
+  description: 'HDG Distribution Group specializes in multi-platform distribution services powered by innovative technology with decades of expertise in the industry.',
+  keywords: 'distribution, logistics, warehousing, HDG Distribution, supply chain, UK distribution',
+  metadataBase: new URL('https://hilldistributiongroup.co.uk'),
+  openGraph: {
+    title: 'Hill Distribution Group',
+    description: 'HDG Distribution Group specializes in multi-platform distribution services powered by innovative technology with decades of expertise in the industry.',
+    url: 'https://hilldistributiongroup.co.uk',
+    siteName: 'Hill Distribution Group',
+    locale: 'en_GB',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function RootLayout({
