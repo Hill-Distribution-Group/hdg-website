@@ -57,13 +57,6 @@ const teamMembers: TeamMember[] = [
     imageUrl: "/images/team/ash.JPG", // Updated to use Ash's photo
     linkedinUrl: "https://www.linkedin.com/in/ashwinsuvendran/", // Updated LinkedIn URL
   },
-  {
-    name: "Massimo Augello",
-    role: "Buyer",
-    bio: "Massimo supports the buying team with market research and supplier communication. He is gaining valuable experience in procurement and inventory management.",
-    imageUrl: "/images/team/placeholder.jpg", // Placeholder image
-    linkedinUrl: "#", // Add Massimo's LinkedIn URL when available
-  },
 ];
 
 export default function People() {

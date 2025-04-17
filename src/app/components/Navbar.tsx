@@ -70,14 +70,14 @@ export default function Navbar() {
             </Link>
           </div>
           
-          {/* Desktop menu */}
-          <div className="hidden md:flex items-center justify-end flex-1">
+          {/* Desktop menu - visible from lg and above */}
+          <div className="hidden lg:flex items-center justify-end flex-1">
             <div className="flex space-x-6 lg:space-x-12 mr-4 lg:mr-8">
               {navigation.map((item) => (
                 <Link 
                   key={item.name}
                   href={item.href} 
-                  className="text-gray-700 hover:text-blue-600 px-2 py-2 text-base lg:text-xl font-medium border-b-2 border-transparent hover:border-blue-600 transition-all whitespace-nowrap"
+                  className="text-gray-700 hover:text-blue-600 px-2 py-2 text-sm sm:text-base lg:text-xl font-medium border-b-2 border-transparent hover:border-blue-600 transition-all whitespace-nowrap"
                 >
                   {item.name === 'About' ? 'About Us' : item.name}
                 </Link>
@@ -85,8 +85,8 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          {/* Mobile menu button - visible below lg */}
+          <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 focus:outline-none"
@@ -107,9 +107,9 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu - visible below lg */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t shadow-lg absolute w-full">
+        <div className="lg:hidden bg-white border-t shadow-lg absolute w-full">
           <div className="px-4 pt-2 pb-4 space-y-2">
             {navigation.map((item) => (
               <Link 
