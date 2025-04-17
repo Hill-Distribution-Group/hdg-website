@@ -5,11 +5,14 @@
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-rgb: 255, 255, 255;
+  --primary-color: 37, 99, 235;  /* blue-600 */
+  --secondary-color: 31, 41, 55; /* gray-800 */
 }
 
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
+  overflow-x: hidden;
 }
 
 .next-image-container {
@@ -27,4 +30,43 @@ body {
   width: 100% !important;
   position: relative !important;
   height: unset !important;
+}
+
+/* Responsive typography */
+@layer base {
+  h1 {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-bold;
+  }
+  h2 {
+    @apply text-2xl sm:text-3xl lg:text-4xl font-semibold;
+  }
+  h3 {
+    @apply text-xl sm:text-2xl lg:text-3xl font-semibold;
+  }
+  p {
+    @apply text-base sm:text-lg;
+  }
+}
+
+/* Touch-friendly adjustments */
+@layer components {
+  .mobile-touch-target {
+    @apply min-h-[44px] min-w-[44px]; /* Apple's recommended minimum tap target size */
+  }
+  
+  /* Responsive container padding */
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Responsive section spacing */
+  .section-spacing {
+    @apply py-8 sm:py-12 lg:py-16;
+  }
+}
+
+/* Prevent horizontal overflow on mobile */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 } 

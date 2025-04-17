@@ -17,49 +17,49 @@ type TeamMember = {
 const teamMembers: TeamMember[] = [
   {
     name: "Thomas Bamford-Murphy",
-    role: "Co-Founder",
+    role: "Chief Financial Officer & Co-Founder",
     bio: "Thomas leads HDG's financial strategy and trading operations. His expertise in pricing strategies and market analysis drives the company's financial growth and helps optimize our trading performance across multiple platforms.",
     imageUrl: "/images/team/tom.jpg",
     linkedinUrl: "https://www.linkedin.com/in/thomas-bamford-murphy-34015526/",
   },
   {
     name: "Daman Sandhu",
-    role: "Co-Founder",
+    role: "Chief Operating Officer & Co-Founder",
     bio: "Daman oversees HDG's warehouse operations and supplier relationships. His expertise in supply chain management and vendor negotiations ensures smooth operations and strong partnerships with our growing network of suppliers.",
     imageUrl: "/images/team/daman.jpg",
     linkedinUrl: "https://www.linkedin.com/in/daman-sandhu-8a010b122/",
   },
   {
     name: "Mert Atanmis",
-    role: "Technical Business Analyst",
+    role: "Head of Technology & Business Strategy",
     bio: "Mert bridges the gap between technology and business strategy at HDG. His expertise in technical analysis and business processes helps optimize our operations and drive innovation.",
     imageUrl: "/images/team/mert.jpg",
     linkedinUrl: "https://www.linkedin.com/in/mertatanmis/",
   },
   {
-    name: "Daman Deep",
-    role: "Warehouse Manager",
-    bio: "Daman Deep manages the day-to-day operations of our warehouse facility, ensuring efficient inventory management and smooth logistics processes. His hands-on approach and attention to detail help maintain our high standards of operation.",
+    name: "Damandeep",
+    role: "Head of Warehouse Operations",
+    bio: "Damandeep manages the day-to-day operations of our warehouse facility, ensuring efficient inventory management and smooth logistics processes. Her hands-on approach and attention to detail help maintain our high standards of operation.",
     imageUrl: "/images/team/damandeep.jpg",
     linkedinUrl: "#", // Add Daman Deep's LinkedIn URL when available
   },
   {
     name: "Ben Capper",
-    role: "Buyer",
+    role: "Senior Buyer",
     bio: "Ben is responsible for sourcing and purchasing inventory. His analytical skills and market knowledge help optimize our procurement strategies.",
-    imageUrl: "/images/team/placeholder.jpg", // Placeholder image
+    imageUrl: "/images/team/ben.JPG", // Updated to use Ben's photo
     linkedinUrl: "https://www.linkedin.com/in/ben-capper-a7725a134/", // Updated LinkedIn URL
   },
   {
     name: "Ash Suven",
-    role: "Buyer",
+    role: "Senior Buyer",
     bio: "Ash focuses on identifying new product opportunities and negotiating with suppliers. His strategic approach contributes to expanding our product range.",
-    imageUrl: "/images/team/placeholder.jpg", // Placeholder image
+    imageUrl: "/images/team/ash.JPG", // Updated to use Ash's photo
     linkedinUrl: "https://www.linkedin.com/in/ashwinsuvendran/", // Updated LinkedIn URL
   },
   {
     name: "Massimo Augello",
-    role: "Intern Buyer",
+    role: "Buyer",
     bio: "Massimo supports the buying team with market research and supplier communication. He is gaining valuable experience in procurement and inventory management.",
     imageUrl: "/images/team/placeholder.jpg", // Placeholder image
     linkedinUrl: "#", // Add Massimo's LinkedIn URL when available
@@ -83,10 +83,21 @@ export default function People() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              Our Team
+              Our Key Senior Leadership Team
             </h1>
             <p className="text-xl max-w-3xl mx-auto text-white">
-              Meet the passionate individuals behind HDG Distribution who are dedicated to revolutionizing the distribution landscape.
+              Meet the passionate individuals leading HDG Distribution, dedicated to revolutionizing the distribution landscape.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Added text to acknowledge the broader team - Moved higher */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              While this page highlights our Key Senior Leadership Team, HDG Distribution thrives thanks to the dedication and hard work of our entire talented team across all departments.
             </p>
           </div>
         </div>
