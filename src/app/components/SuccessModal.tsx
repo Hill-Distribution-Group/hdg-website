@@ -25,7 +25,7 @@ export default function SuccessModal({ isOpen, onClose }: SuccessModalProps) {
         <div className="flex flex-col items-center">
           <div className="relative w-32 h-32 mb-6">
             <Image
-              src="/images/logo.png"
+              src="/images/logo_original.png"
               alt="HDG Logo"
               fill
               className="object-contain"

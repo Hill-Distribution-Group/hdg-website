@@ -9,6 +9,7 @@ const navigation = [
   { name: 'Solutions', href: '/solutions' },
   { name: 'About', href: '/about' },
   { name: 'People', href: '/people' },
+  { name: 'Brands', href: '/brands' },
   { name: 'Careers', href: '/careers' },
   { name: 'Contact', href: '/contact' },
 ];
@@ -46,18 +47,18 @@ export default function Navbar() {
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      scrolled ? 'bg-white shadow-lg' : 'bg-white shadow-lg'
+      scrolled ? 'bg-blue-900 shadow-lg' : 'bg-blue-900 shadow-lg'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`flex justify-between items-center ${
+        <div className={`flex justify-start items-center ${
           scrolled ? 'h-20 sm:h-24' : 'h-24 sm:h-32'
         } transition-all duration-300`}>
-          <div className="flex-1 flex justify-start">
+          <div className="flex-shrink-0 mr-8">
             <Link href="/" className="flex-shrink-0">
               <div className={`relative ${
                 scrolled 
-                  ? 'w-[200px] sm:w-[300px] md:w-[400px] h-[60px] sm:h-[80px]' 
-                  : 'w-[250px] sm:w-[350px] md:w-[500px] h-[70px] sm:h-[100px]'
+                  ? 'w-[200px] sm:w-[280px] md:w-[350px] h-[60px] sm:h-[80px]' 
+                  : 'w-[240px] sm:w-[320px] md:w-[400px] h-[70px] sm:h-[90px]'
               } transition-all duration-300`}>
                 <Image
                   src="/images/logo2.png"
@@ -71,13 +72,13 @@ export default function Navbar() {
           </div>
           
           {/* Desktop menu - visible from lg and above */}
-          <div className="hidden lg:flex items-center justify-end flex-1">
-            <div className="flex space-x-6 lg:space-x-12 mr-4 lg:mr-8">
+          <div className="hidden lg:flex items-center">
+            <div className="flex space-x-6 xl:space-x-8">
               {navigation.map((item) => (
                 <Link 
                   key={item.name}
                   href={item.href} 
-                  className="text-gray-700 hover:text-blue-600 px-2 py-2 text-sm sm:text-base lg:text-xl font-medium border-b-2 border-transparent hover:border-blue-600 transition-all whitespace-nowrap"
+                  className="text-gray-300 hover:text-white px-2 py-2 text-base xl:text-lg font-medium border-b-2 border-transparent hover:border-white transition-all whitespace-nowrap"
                 >
                   {item.name === 'About' ? 'About Us' : item.name}
                 </Link>
@@ -86,10 +87,10 @@ export default function Navbar() {
           </div>
 
           {/* Mobile menu button - visible below lg */}
-          <div className="lg:hidden flex items-center">
+          <div className="lg:hidden flex items-center ml-auto">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white focus:outline-none"
               aria-expanded={isOpen}
             >
               <span className="sr-only">Open main menu</span>
@@ -109,13 +110,13 @@ export default function Navbar() {
 
       {/* Mobile menu - visible below lg */}
       {isOpen && (
-        <div className="lg:hidden bg-white border-t shadow-lg absolute w-full">
+        <div className="lg:hidden bg-blue-900 border-t border-blue-800 shadow-lg absolute w-full">
           <div className="px-4 pt-2 pb-4 space-y-2">
             {navigation.map((item) => (
               <Link 
                 key={item.name}
                 href={item.href} 
-                className="text-gray-700 hover:text-blue-600 hover:bg-gray-50 block px-3 py-3 text-base font-medium rounded-md transition-all"
+                className="text-gray-300 hover:text-white hover:bg-blue-800 block px-3 py-3 text-base font-medium rounded-md transition-all"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name === 'About' ? 'About Us' : item.name}

@@ -33,9 +33,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/png" sizes="32x32" href="/images/logo2.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/images/logo2.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/images/logo2.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/logo_original.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/logo_original.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/logo_original.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
       </head>
       <body className={inter.className}>

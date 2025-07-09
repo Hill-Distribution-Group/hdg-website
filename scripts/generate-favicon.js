@@ -3,7 +3,7 @@ const fs = require('fs').promises;
 const path = require('path');
 
 async function generateFavicons() {
-  const inputFile = path.join(process.cwd(), 'public', 'images', 'logo2.png');
+  const inputFile = path.join(process.cwd(), 'public', 'images', 'logo_original.png');
   const publicDir = path.join(process.cwd(), 'public');
 
   // Generate favicon.png (32x32)
